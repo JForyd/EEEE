@@ -39,21 +39,17 @@
         .logo-button {
             background: none;
             border: none;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #06402B;
             cursor: pointer;
             padding: 0.5rem 1rem;
-            transition: opacity 0.2s;
-            display: flex;
-            align-items: center;
+            transition: color 0.2s;
         }
 
         .logo-button:hover {
-            opacity: 0.8;
-        }
-
-        .logo-button img {
-            height: 50px;
-            width: auto;
-            display: block;
+            color: #06402B;
         }
 
         .dropdown-menu {
@@ -89,7 +85,7 @@
 
         .dropdown-menu a:hover {
             background-color: #f9f9f9;
-            color: #14b8a6;
+            color: #06402B;
         }
 
         .hero {
@@ -150,12 +146,12 @@
 <body>
     <header>
         <div class="logo-container">
-            <button class="logo-button"><img src="logo.jpg" alt="EEEE Group Logo"></button>
+            <button class="logo-button">EEEE</button>
             <nav class="dropdown-menu">
                 <a href="#home">Home</a>
-                <a href="#approach">Our Approach</a>
-                <a href="#services">What We Do</a>
-                <a href="#portfolio">Companies We Back</a>
+                <a href="#philosophy">Our Philosophy</a>
+                <a href="#services">Advisory Services</a>
+                <a href="#portfolio">Portfolio</a>
                 <a href="#contact">Start a Conversation</a>
             </nav>
         </div>
@@ -170,8 +166,8 @@
         <!-- Home content -->
     </section>
 
-    <section id="approach">
-        <!-- Our Approach content -->
+    <section id="philosophy">
+        <!-- Our Philosophy content -->
     </section>
 
     <section id="services">
