@@ -29,6 +29,7 @@
             position: relative;
             padding: 2rem 4rem;
             border-bottom: 1px solid #e5e5e5;
+            background-color: #0F3B2E;
         }
 
         .logo-container {
@@ -42,14 +43,14 @@
             font-family: 'Inter', sans-serif;
             font-weight: 700;
             font-size: 1.5rem;
-            color: #0F3B2E;
+            color: #ffffff;
             cursor: pointer;
             padding: 0.5rem 1rem;
-            transition: color 0.2s;
+            transition: opacity 0.2s;
         }
 
         .logo-button:hover {
-            color: #0F3B2E;
+            opacity: 0.8;
         }
 
         .dropdown-menu {
@@ -57,8 +58,8 @@
             position: absolute;
             top: 100%;
             left: 0;
-            background-color: #ffffff;
-            border: 1px solid #e5e5e5;
+            background-color: #0F3B2E;
+            border: 1px solid #0F3B2E;
             min-width: 200px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             z-index: 1000;
@@ -71,11 +72,11 @@
         .dropdown-menu a {
             display: block;
             padding: 1rem 1.5rem;
-            color: #000000;
+            color: #ffffff;
             text-decoration: none;
             font-family: 'Inter', sans-serif;
             font-weight: 400;
-            border-bottom: 1px solid #f5f5f5;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             transition: background-color 0.2s, color 0.2s;
         }
 
@@ -84,8 +85,8 @@
         }
 
         .dropdown-menu a:hover {
-            background-color: #f9f9f9;
-            color: #0F3B2E;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
         }
 
         .hero {
