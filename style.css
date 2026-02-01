@@ -155,13 +155,3 @@ body {
 .hidden {
   display: none;
 }
-.photo-section {
-  height: 40vh;
-  width: 100%;
-  background-image: url("images/forest.jpg");
-  background-size: cover;
-  background-position: center;
-}
-body {
-  margin: 0;
-}
