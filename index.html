@@ -204,6 +204,20 @@
     <section id="contact">
         <!-- Start a Conversation content -->
     </section>
+    <script>
+  const logoButton = document.getElementById("logoButton");
+  const dropdownMenu = document.getElementById("dropdownMenu");
+
+  logoButton.addEventListener("click", (e) => {
+    e.stopPropagation();
+    dropdownMenu.classList.toggle("hidden");
+  });
+
+  document.addEventListener("click", () => {
+    dropdownMenu.classList.add("hidden");
+  });
+</script>
+
 </body>
 
 </html>
