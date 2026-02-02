@@ -3,6 +3,7 @@
 
 <head>
     <link rel="icon" type="image/png" href="/favicon.png">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
@@ -119,10 +120,10 @@
         .hero-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(to bottom, 
-                rgba(15, 59, 46, 0.7), 
-                rgba(15, 59, 46, 0.6), 
-                rgba(15, 59, 46, 0.75));
+            background: linear-gradient(to bottom,
+                    rgba(15, 59, 46, 0.7),
+                    rgba(15, 59, 46, 0.6),
+                    rgba(15, 59, 46, 0.75));
         }
 
         .hero-content {
@@ -277,30 +278,63 @@
             color: rgba(255, 255, 255, 0.9);
         }
 
-        /* Contact Section */
+        /* Contact Hero Section */
+        .contact-hero {
+            position: relative;
+            padding: 8rem 2rem;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .contact-hero-background {
+            position: absolute;
+            inset: 0;
+        }
+
+        .contact-hero-background img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .contact-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom,
+                    rgba(15, 59, 46, 0.75),
+                    rgba(15, 59, 46, 0.65),
+                    rgba(15, 59, 46, 0.8));
+        }
+
+        .contact-hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .contact-hero h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(40px, 5vw, 56px);
+            font-weight: 600;
+            line-height: 1.2;
+            color: #ffffff;
+        }
+
+        /* Contact Main Content */
         .section-contact {
-            padding: 7rem 2rem;
+            padding: 5rem 1.5rem;
             background-color: #ffffff;
         }
 
         .section-contact .container {
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
-        }
-
-        .section-contact h2 {
-            font-family: var(--font-heading);
-            font-size: clamp(36px, 4vw, 48px);
-            line-height: 1.3;
-            font-weight: 600;
-            color: var(--color-primary);
-            text-align: center;
-            margin-bottom: 2.5rem;
         }
 
         .contact-content {
-            max-width: 700px;
-            margin: 0 auto;
             font-family: var(--font-body);
             font-size: 18px;
             line-height: 1.8;
@@ -311,45 +345,59 @@
             margin-bottom: 2rem;
         }
 
-        .contact-content .text-center {
-            text-align: center;
-        }
-
-        .contact-divider {
-            border-top: 2px solid rgba(15, 59, 46, 0.1);
+        .contact-section-divider {
             padding-top: 3rem;
+            padding-bottom: 2rem;
+            border-top: 1px solid rgba(15, 59, 46, 0.1);
             margin-top: 3rem;
         }
 
-        .contact-box {
-            background-color: rgba(15, 59, 46, 0.05);
-            padding: 2.5rem;
-            border-left: 4px solid var(--color-primary);
-            margin: 2rem 0;
-        }
-
-        .contact-box p:first-child {
-            font-size: 17px;
-            margin-bottom: 1rem;
-        }
-
-        .contact-box a {
-            font-family: var(--font-body);
-            font-size: 20px;
-            font-weight: 500;
+        .contact-section-divider h2 {
+            font-family: var(--font-heading);
+            font-size: 28px;
             color: var(--color-primary);
-            text-decoration: none;
+            margin-bottom: 1.5rem;
         }
 
-        .contact-box a:hover {
+        .contact-content ul {
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .contact-content ul li {
+            margin-bottom: 0.75rem;
+            opacity: 0.8;
+        }
+
+        .contact-content .email-link {
+            color: var(--color-primary);
             text-decoration: underline;
         }
 
-        .contact-footer {
-            margin-top: 2rem;
-            text-align: center;
+        .contact-content .email-link:hover {
+            text-decoration: none;
+        }
+
+        .contact-content .disclaimer {
+            margin-top: 1.5rem;
             opacity: 0.6;
+            font-style: italic;
             font-size: 16px;
+        }
+
+        /* Contact Footer Note */
+        .contact-footer-note {
+            padding: 4rem 1.5rem;
+            background-color: rgba(15, 59, 46, 0.05);
+            text-align: center;
+        }
+
+        .contact-footer-note p {
+            font-family: var(--font-body);
+            font-size: 16px;
+            opacity: 0.7;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         @media (max-width: 768px) {
@@ -444,13 +492,16 @@
             <h2>Built on Fundamentals</h2>
             <div class="content">
                 <p>
-                    We are not structured like a traditional private equity firm. There are no leverage-driven exits, no short-term horizons, and no financial engineering.
+                    We are not structured like a traditional private equity firm. There are no leverage-driven exits, no
+                    short-term horizons, and no financial engineering.
                 </p>
                 <p>
-                    Instead, we focus on direct involvement in operations, continuous learning, and building value through disciplined execution over many years.
+                    Instead, we focus on direct involvement in operations, continuous learning, and building value
+                    through disciplined execution over many years.
                 </p>
                 <p>
-                    The model is simple: own businesses we understand, improve them with care and competence, and hold them indefinitely as part of a permanent group.
+                    The model is simple: own businesses we understand, improve them with care and competence, and hold
+                    them indefinitely as part of a permanent group.
                 </p>
             </div>
         </div>
@@ -464,57 +515,123 @@
                 <div class="principle-item">
                     <h3>Operator-First</h3>
                     <p>
-                        We lead from the inside. Our understanding comes from direct involvement in the work, not financial modeling alone.
+                        We lead from the inside. Our understanding comes from direct involvement in the work, not
+                        financial modeling alone.
                     </p>
                 </div>
                 <div class="principle-item">
                     <h3>Long-Term Ownership</h3>
                     <p>
-                        Companies are held indefinitely. The goal is compounding value through patient execution, not quick exits.
+                        Companies are held indefinitely. The goal is compounding value through patient execution, not
+                        quick exits.
                     </p>
                 </div>
                 <div class="principle-item">
                     <h3>Continuous Learning</h3>
                     <p>
-                        Every business is a learning opportunity. We document what works, refine processes, and improve over time.
+                        Every business is a learning opportunity. We document what works, refine processes, and improve
+                        over time.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="section-contact" id="contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            
-            <div class="contact-content">
-                <p class="text-center">
-                    EEEE Group is not actively seeking investors or outside capital. We operate using internal resources and maintain full ownership.
-                </p>
-                
-                <div class="contact-divider">
-                    <p>
-                        If you are a business owner considering a sale to a long-term operator, or if you have relevant operational experience and are interested in joining one of our portfolio companies, we may be interested in speaking with you.
-                    </p>
-                    
-                    <div class="contact-box">
-                        <p>
-                            For relevant inquiries, please reach out:
-                        </p>
-                        <p>
-                            <a href="mailto:contact@eeeegroup.com">
-                                contact@eeeegroup.com
-                            </a>
-                        </p>
-                    </div>
+    <!-- Contact Hero Section -->
+    <section class="contact-hero" id="contact">
+        <!-- Background Image -->
+        <div class="contact-hero-background">
+            <img src="https://images.unsplash.com/photo-1765658696595-6bec2cd4627a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxldmVyZ3JlZW4lMjBmb3Jlc3QlMjBwZWFjZWZ1bCUyMHF1aWV0fGVufDF8fHx8MTc3MDAwMjUwNnww&ixlib=rb-4.1.0&q=80&w=1080"
+                alt="Peaceful evergreen forest">
+        </div>
+        <!-- Green Overlay -->
+        <div class="contact-hero-overlay"></div>
 
-                    <p class="contact-footer">
-                        We respond to relevant inquiries but do not engage with unsolicited investment opportunities, partnerships, or vendor pitches.
+        <!-- Hero Content -->
+        <div class="contact-hero-content">
+            <h1>Contact</h1>
+        </div>
+    </section>
+
+    <!-- Contact Main Content -->
+    <section class="section-contact">
+        <div class="container">
+            <div class="contact-content">
+                <p>
+                    EEEE Group is not actively seeking investors or outside capital. We operate using internal resources
+                    and maintain full ownership of all businesses within the group.
+                </p>
+
+                <p>
+                    If you are a business owner considering a sale to a long-term operator, or if you have relevant
+                    operational experience and are interested in joining one of our portfolio companies, we may be
+                    interested in speaking with you.
+                </p>
+
+                <!-- For Business Owners -->
+                <div class="contact-section-divider">
+                    <h2>For Business Owners</h2>
+                    <p>
+                        If you own a business that meets the following criteria, we would be interested in learning
+                        more:
+                    </p>
+                    <ul>
+                        <li>• Sustainable, profitable operations with real customers</li>
+                        <li>• Straightforward business model we can understand</li>
+                        <li>• Competent team in place or strong operational foundation</li>
+                        <li>• Room for improvement through systems and patient execution</li>
+                    </ul>
+                    <p>
+                        We are not interested in turnarounds, distressed situations, or businesses requiring significant
+                        capital infusions to survive. We prefer businesses that are already functional and would benefit
+                        from long-term ownership.
+                    </p>
+                </div>
+
+                <!-- For Operators -->
+                <div class="contact-section-divider">
+                    <h2>For Operators</h2>
+                    <p>
+                        As the group grows, we will need capable operators to manage businesses within the portfolio. We
+                        value:
+                    </p>
+                    <ul>
+                        <li>• Direct operational experience, not just advisory or consulting work</li>
+                        <li>• Competence in building systems and improving processes</li>
+                        <li>• Long-term thinking and patience</li>
+                        <li>• Willingness to learn and adapt</li>
+                    </ul>
+                    <p>
+                        We are not currently hiring, but we maintain relationships with people who might be a good fit
+                        as the group expands.
+                    </p>
+                </div>
+
+                <!-- General Inquiries -->
+                <div class="contact-section-divider">
+                    <h2>General Inquiries</h2>
+                    <p>
+                        For all other inquiries, please reach out via email:
+                    </p>
+                    <p>
+                        <a href="mailto:contact@eeeegroup.com" class="email-link">
+                            contact@eeeegroup.com
+                        </a>
+                    </p>
+                    <p class="disclaimer">
+                        We respond to relevant inquiries but do not engage with unsolicited investment opportunities,
+                        partnerships, or vendor pitches.
                     </p>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Footer Note -->
+    <section class="contact-footer-note">
+        <p>
+            Thank you for your interest in EEEE Group.
+        </p>
     </section>
 </body>
 
