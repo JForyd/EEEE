@@ -1,177 +1,111 @@
-import { useState } from "react";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EEEE Group</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-export function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    organization: "",
-    email: "",
-    message: "",
-  });
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <img
+      class="hero-bg"
+      src="https://images.unsplash.com/photo-1672196807560-5fca8b5a9242?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600"
+      alt="Evergreen forest"
+    />
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Form submission would be handled here
-    console.log("Form submitted:", formData);
-  };
+    <div class="hero-content">
+      <h1>
+        Short-term gains attract capital.<br />
+        Long-term execution builds companies.
+      </h1>
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+      <h2>We focus on people, skills, and development.</h2>
 
-  return (
-    <div className="pt-24">
-      {/* Hero Section */}
-      <section className="bg-white">
-        <div className="max-w-[1600px] mx-auto px-12 py-32">
-          <div className="max-w-5xl">
-            <p className="text-sm tracking-[0.3em] uppercase opacity-60 mb-12">
-              Start a Conversation
-            </p>
-            <h1 className="mb-16">
-              Let's Discuss Your Opportunity
-            </h1>
-            <p className="text-2xl opacity-80 leading-relaxed max-w-4xl">
-              We welcome inquiries from founders, management teams, and institutional partners. Reach out to begin a confidential conversation.
-            </p>
-          </div>
-        </div>
-      </section>
+      <p class="welcome">Welcome to EEEE Group</p>
 
-      {/* Divider */}
-      <div className="h-2 bg-[var(--forest-green)]"></div>
-
-      {/* Contact Form & Info */}
-      <section className="bg-[var(--forest-green)] text-white">
-        <div className="max-w-[1600px] mx-auto px-12 py-32">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
-            {/* Contact Form */}
-            <div>
-              <form onSubmit={handleSubmit} className="space-y-10">
-                <div className="space-y-3">
-                  <label htmlFor="name" className="block text-sm tracking-[0.1em] uppercase opacity-80">
-                    Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-0 py-4 bg-transparent border-b-2 border-white/30 focus:border-white outline-none transition-colors text-lg text-white placeholder-white/50"
-                  />
-                </div>
-
-                <div className="space-y-3">
-                  <label htmlFor="organization" className="block text-sm tracking-[0.1em] uppercase opacity-80">
-                    Organization
-                  </label>
-                  <input
-                    type="text"
-                    id="organization"
-                    name="organization"
-                    value={formData.organization}
-                    onChange={handleChange}
-                    className="w-full px-0 py-4 bg-transparent border-b-2 border-white/30 focus:border-white outline-none transition-colors text-lg text-white placeholder-white/50"
-                  />
-                </div>
-
-                <div className="space-y-3">
-                  <label htmlFor="email" className="block text-sm tracking-[0.1em] uppercase opacity-80">
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-0 py-4 bg-transparent border-b-2 border-white/30 focus:border-white outline-none transition-colors text-lg text-white placeholder-white/50"
-                  />
-                </div>
-
-                <div className="space-y-3">
-                  <label htmlFor="message" className="block text-sm tracking-[0.1em] uppercase opacity-80">
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={6}
-                    className="w-full px-0 py-4 bg-transparent border-b-2 border-white/30 focus:border-white outline-none transition-colors resize-none text-lg text-white placeholder-white/50"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="px-12 py-5 border-2 border-white text-white hover:bg-white hover:text-[var(--forest-green)] transition-all duration-300 text-lg"
-                >
-                  Send Message
-                </button>
-              </form>
-            </div>
-
-            {/* Contact Information */}
-            <div className="space-y-16">
-              <div>
-                <h3 className="text-3xl mb-8 text-white">Office</h3>
-                <div className="space-y-4 text-lg opacity-90">
-                  <p>EEEE</p>
-                  <p>250 Park Avenue, Suite 3000</p>
-                  <p>New York, NY 10177</p>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-3xl mb-8 text-white">General Inquiries</h3>
-                <div className="space-y-4 text-lg opacity-90">
-                  <p>
-                    <a href="mailto:info@eeee.com" className="hover:opacity-70 transition-opacity">
-                      info@eeee.com
-                    </a>
-                  </p>
-                  <p>+1 (212) 555-0100</p>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-3xl mb-8 text-white">Investment Opportunities</h3>
-                <div className="space-y-4 text-lg opacity-90">
-                  <p>
-                    <a href="mailto:opportunities@eeee.com" className="hover:opacity-70 transition-opacity">
-                      opportunities@eeee.com
-                    </a>
-                  </p>
-                </div>
-              </div>
-
-              <div className="pt-8 border-t border-white/20">
-                <p className="text-base opacity-80 leading-relaxed">
-                  All inquiries are treated with strict confidentiality. We typically respond to serious inquiries within 48 business hours.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-white border-t border-[var(--forest-green)]/10 py-12">
-        <div className="max-w-[1600px] mx-auto px-12">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <p className="text-sm opacity-60">
-              © 2026 EEEE. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <div class="hero-buttons">
+        <a href="#about" class="btn primary">About</a>
+        <a href="#vision" class="btn secondary">Vision</a>
+      </div>
     </div>
-  );
-}
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section class="section light" id="about">
+    <div class="container narrow">
+      <h2>Built on Fundamentals</h2>
+      <p>
+        We are not structured like a traditional private equity firm. There are no leverage-driven exits,
+        no short-term horizons, and no financial engineering.
+      </p>
+      <p>
+        Instead, we focus on direct involvement in operations, continuous learning, and building value
+        through disciplined execution over many years.
+      </p>
+      <p>
+        The model is simple: own businesses we understand, improve them with care and competence,
+        and hold them indefinitely as part of a permanent group.
+      </p>
+    </div>
+  </section>
+
+  <!-- PRINCIPLES -->
+  <section class="section dark">
+    <div class="container">
+      <h2 class="center">Core Principles</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Operator-First</h3>
+          <p>
+            We lead from the inside. Our understanding comes from direct involvement in the work,
+            not financial modeling alone.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Long-Term Ownership</h3>
+          <p>
+            Companies are held indefinitely. The goal is compounding value through patient execution,
+            not quick exits.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Continuous Learning</h3>
+          <p>
+            Every business is a learning opportunity. We document what works, refine processes,
+            and improve over time.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section light" id="vision">
+    <div class="container narrow center">
+      <h2>Get In Touch</h2>
+
+      <p>
+        EEEE Group is not actively seeking investors or outside capital. We operate using internal
+        resources and maintain full ownership.
+      </p>
+
+      <div class="contact-box">
+        <p>For relevant inquiries:</p>
+        <a href="mailto:contact@eeeegroup.com">contact@eeeegroup.com</a>
+      </div>
+
+      <p class="muted">
+        We respond to relevant inquiries only.
+      </p>
+    </div>
+  </section>
+
+</body>
+</html>
