@@ -5,567 +5,122 @@
     <link rel="icon" type="image/png" href="/favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="EEEE Group - We invest, support, and scale businesses to realize their potential.">
-    <title>EEEE Group - Private Equity Consulting</title>
+    <meta name="description" content="EEEE Group - Long-term business ownership and operations">
+    <title>EEEE Group - Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --color-primary: #0F3B2E;
-            --font-heading: 'Inter', sans-serif;
-            --font-body: 'Inter', sans-serif;
-            --font-logo: 'Inter', sans-serif;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: var(--font-body);
-            font-weight: 400;
-            background-color: #ffffff;
-            color: #000000;
-            line-height: 1.6;
-            padding-top: 80px;
-        }
-
-        /* Header and Navigation */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 50;
-            background-color: var(--color-primary);
-        }
-
-        nav {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1.25rem 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo-container {
-            position: relative;
-        }
-
-        .logo-button {
-            background: none;
-            border: none;
-            font-family: var(--font-logo);
-            font-weight: 700;
-            font-size: 28px;
-            letter-spacing: -0.02em;
-            color: #ffffff;
-            cursor: pointer;
-            padding: 0;
-        }
-
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            margin-top: 0.5rem;
-            background-color: #ffffff;
-            border: 1px solid rgba(15, 59, 46, 0.1);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            min-width: 200px;
-        }
-
-        .dropdown-menu.active {
-            display: block;
-        }
-
-        .dropdown-menu a {
-            display: block;
-            padding: 0.75rem 1.25rem;
-            color: var(--color-primary);
-            text-decoration: none;
-            font-family: var(--font-body);
-            border-bottom: 1px solid rgba(15, 59, 46, 0.05);
-            transition: background-color 0.2s;
-        }
-
-        .dropdown-menu a:last-child {
-            border-bottom: none;
-        }
-
-        .dropdown-menu a:hover {
-            background-color: rgba(15, 59, 46, 0.05);
-        }
-
-        /* Hero Sections - Shared Styles */
-        .hero-section {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-        }
-
-        .hero-section-small {
-            position: relative;
-            padding: 8rem 2rem;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-        }
-
-        .hero-background {
-            position: absolute;
-            inset: 0;
-        }
-
-        .hero-background img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to bottom,
-                    rgba(15, 59, 46, 0.7),
-                    rgba(15, 59, 46, 0.6),
-                    rgba(15, 59, 46, 0.75));
-        }
-
-        .hero-overlay-alt {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to bottom,
-                    rgba(15, 59, 46, 0.75),
-                    rgba(15, 59, 46, 0.65),
-                    rgba(15, 59, 46, 0.8));
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 5rem 2rem;
-            width: 100%;
-        }
-
-        .hero-text {
-            max-width: 800px;
-        }
-
-        .hero-section h1 {
-            font-family: var(--font-heading);
-            font-size: clamp(42px, 5.5vw, 72px);
-            line-height: 1.25;
-            font-weight: 600;
-            letter-spacing: -0.02em;
-            color: #ffffff;
-            margin-bottom: 5rem;
-        }
-
-        .hero-section-small h1 {
-            font-family: var(--font-heading);
-            font-size: clamp(40px, 5vw, 56px);
-            font-weight: 600;
-            line-height: 1.2;
-            color: #ffffff;
-        }
-
-        .hero-section h2 {
-            font-family: var(--font-heading);
-            font-size: clamp(28px, 3.2vw, 44px);
-            line-height: 1.4;
-            font-weight: 400;
-            color: #ffffff;
-            margin-bottom: 5rem;
-        }
-
-        .hero-section p {
-            font-family: var(--font-body);
-            font-size: clamp(16px, 1.5vw, 19px);
-            line-height: 1.6;
-            font-weight: 400;
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 5rem;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1.5rem;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 1rem 2.5rem;
-            font-family: var(--font-body);
-            font-size: 17px;
-            letter-spacing: 0.02em;
-            text-decoration: none;
-            border: 2px solid #ffffff;
-            transition: all 0.3s;
-            cursor: pointer;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background-color: #ffffff;
-            color: var(--color-primary);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--color-primary);
-            color: #ffffff;
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: #ffffff;
-        }
-
-        .btn-secondary:hover {
-            background-color: #ffffff;
-            color: var(--color-primary);
-        }
-
-        /* Content Sections */
-        .content-section {
-            padding: 7rem 2rem;
-            background-color: #ffffff;
-        }
-
-        .content-section-alt {
-            padding: 7rem 2rem;
-            background-color: var(--color-primary);
-            color: #ffffff;
-        }
-
-        .content-section-light {
-            padding: 5rem 1.5rem;
-            background-color: #ffffff;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .container-wide {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .container-xl {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-family: var(--font-heading);
-            font-size: clamp(36px, 4vw, 48px);
-            line-height: 1.3;
-            font-weight: 600;
-            color: var(--color-primary);
-            margin-bottom: 2rem;
-        }
-
-        .section-title-center {
-            text-align: center;
-            margin-bottom: 5rem;
-        }
-
-        .section-title-white {
-            color: #ffffff;
-        }
-
-        .section-subtitle {
-            font-family: var(--font-heading);
-            font-size: 32px;
-            color: var(--color-primary);
-            margin-top: 2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .section-subtitle-small {
-            font-family: var(--font-heading);
-            font-size: 28px;
-            color: var(--color-primary);
-            margin-bottom: 1.5rem;
-        }
-
-        .section-subtitle-xs {
-            font-family: var(--font-heading);
-            font-size: 22px;
-            margin-bottom: 0.5rem;
-        }
-
-        .content-text {
-            font-family: var(--font-body);
-            font-size: 18px;
-            line-height: 1.8;
-            color: #1a1a1a;
-        }
-
-        .content-text p {
-            margin-bottom: 2rem;
-        }
-
-        .content-text-large {
-            font-size: 19px;
-            line-height: 1.9;
-        }
-
-        .content-text-small {
-            font-size: 17px;
-            line-height: 1.8;
-        }
-
-        /* Principles Grid */
-        .principles-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 4rem;
-        }
-
-        .principle-item h3 {
-            font-family: var(--font-heading);
-            font-size: 26px;
-            font-weight: 600;
-            margin-bottom: 1.25rem;
-        }
-
-        .principle-item p {
-            font-family: var(--font-body);
-            font-size: 17px;
-            line-height: 1.8;
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        /* Lists */
-        .content-text ul {
-            padding-left: 1.5rem;
-            margin: 1.5rem 0;
-        }
-
-        .content-text ul li {
-            margin-bottom: 0.75rem;
-            opacity: 0.8;
-        }
-
-        .value-list {
-            padding-left: 1.5rem;
-            border-left: 2px solid rgba(15, 59, 46, 0.2);
-        }
-
-        .value-list li {
-            margin-bottom: 1rem;
-        }
-
-        .value-list strong {
-            display: block;
-        }
-
-        .value-list .sub-text {
-            opacity: 0.8;
-            margin-top: 0.25rem;
-        }
-
-        /* Bordered Content */
-        .border-left-section {
-            border-left: 2px solid var(--color-primary);
-            padding-left: 1.5rem;
-            margin: 3rem 0;
-        }
-
-        .border-left-light {
-            border-left: 2px solid rgba(15, 59, 46, 0.2);
-            padding-left: 1.5rem;
-        }
-
-        .section-divider {
-            padding-top: 3rem;
-            padding-bottom: 2rem;
-            border-top: 1px solid rgba(15, 59, 46, 0.1);
-            margin-top: 3rem;
-        }
-
-        /* Footer Sections */
-        .footer-note {
-            padding: 4rem 1.5rem;
-            background-color: rgba(15, 59, 46, 0.05);
-            text-align: center;
-        }
-
-        .footer-note p {
-            font-family: var(--font-body);
-            font-size: 16px;
-            opacity: 0.7;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* Contact Specific */
-        .email-link {
-            color: var(--color-primary);
-            text-decoration: underline;
-        }
-
-        .email-link:hover {
-            text-decoration: none;
-        }
-
-        .disclaimer {
-            margin-top: 1.5rem;
-            opacity: 0.6;
-            font-style: italic;
-            font-size: 16px;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            body {
-                padding-top: 70px;
-            }
-
-            .hero-content {
-                padding: 3rem 1.5rem;
-            }
-
-            .hero-section h1 {
-                margin-bottom: 3rem;
-            }
-
-            .hero-section h2 {
-                margin-bottom: 3rem;
-            }
-
-            .hero-section p {
-                margin-bottom: 3rem;
-            }
-
-            .content-section,
-            .content-section-alt {
-                padding: 4rem 1.5rem;
-            }
-
-            .principles-grid {
-                gap: 3rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <!-- Header -->
     <header>
         <nav>
-  <div class="logo-container">
-    <button class="logo-button" onclick="toggleDropdown()">EEEE</button>
-    <div class="dropdown-menu" id="dropdownMenu">
-      <a href="index.html" onclick="closeDropdown()">Home</a>
-      <a href="about.html" onclick="closeDropdown()">About</a>
-      <a href="learning.html" onclick="closeDropdown()">What We're Learning</a>
-      <a href="projects.html" onclick="closeDropdown()">Projects</a>
-      <a href="vision.html" onclick="closeDropdown()">Vision</a>
-      <a href="contact.html" onclick="closeDropdown()">Contact</a>
-    </div>
-  </div>
-</nav>
-
+            <div class="logo-container">
+                <button class="logo-button" onclick="toggleDropdown()">EEEE</button>
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="learning.html">What We're Learning</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="vision.html">Vision</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <!-- HOME SECTION -->
-    <section class="hero-section" id="home">
-        <div class="hero-background">
-            <img src="https://images.unsplash.com/photo-1672196807560-5fca8b5a9242?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZW5zZSUyMGV2ZXJncmVlbiUyMGZvcmVzdCUyMHNvZnQlMjBvdmVyY2FzdCUyMGxpZ2h0fGVufDF8fHx8MTc3MDAwMTk5MXww&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Dense evergreen forest">
-        </div>
-        <div class="hero-overlay"></div>
+    <!-- HOME PAGE CONTENT -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-background">
+                <img src="https://images.unsplash.com/photo-1672196807560-5fca8b5a9242?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZW5zZSUyMGV2ZXJncmVlbiUyMGZvcmVzdCUyMHNvZnQlMjBvdmVyY2FzdCUyMGxpZ2h0fGVufDF8fHx8MTc3MDAwMTk5MXww&ixlib=rb-4.1.0&q=80&w=1080"
+                    alt="Dense evergreen forest">
+            </div>
+            <div class="hero-overlay"></div>
 
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>
-                    Short-term gains attract capital.<br>
-                    Long-term execution builds companies.
-                </h1>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>
+                        Short-term gains attract capital.<br>
+                        Long-term execution builds companies.
+                    </h1>
 
-                <h2>
-                    We focus on people, skills, and development.
-                </h2>
+                    <h2>
+                        We focus on people, skills, and development.
+                    </h2>
 
-                <p>
-                    Welcome to EEEE Group.
-                </p>
+                    <p>
+                        Welcome to EEEE Group.
+                    </p>
 
-                <div class="hero-buttons">
-                    <a href="#about" class="btn btn-primary">About</a>
-                    <a href="#vision" class="btn btn-secondary">Vision</a>
+                    <div class="hero-buttons">
+                        <a href="about.html" class="btn btn-primary">About</a>
+                        <a href="vision.html" class="btn btn-secondary">Vision</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Philosophy Section -->
-    <section class="content-section">
-        <div class="container-wide">
-            <h2 class="section-title">Built on Fundamentals</h2>
-            <div class="content-text content-text-large">
-                <p>
-                    We are not structured like a traditional private equity firm. There are no leverage-driven exits, no
-                    short-term horizons, and no financial engineering.
-                </p>
-                <p>
-                    Instead, we focus on direct involvement in operations, continuous learning, and building value
-                    through disciplined execution over many years.
-                </p>
-                <p>
-                    The model is simple: own businesses we understand, improve them with care and competence, and hold
-                    them indefinitely as part of a permanent group.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Core Principles Section -->
-    <section class="content-section-alt">
-        <div class="container-xl">
-            <h2 class="section-title section-title-center section-title-white">Core Principles</h2>
-            <div class="principles-grid">
-                <div class="principle-item">
-                    <h3>Operator-First</h3>
+        <!-- Philosophy Section -->
+        <section class="content-section">
+            <div class="container-wide">
+                <h2 class="section-title">Built on Fundamentals</h2>
+                <div class="content-text content-text-large">
                     <p>
-                        We lead from the inside. Our understanding comes from direct involvement in the work, not
-                        financial modeling alone.
+                        We are not structured like a traditional private equity firm. There are no leverage-driven
+                        exits, no
+                        short-term horizons, and no financial engineering.
                     </p>
-                </div>
-                <div class="principle-item">
-                    <h3>Long-Term Ownership</h3>
                     <p>
-                        Companies are held indefinitely. The goal is compounding value through patient execution, not
-                        quick exits.
+                        Instead, we focus on direct involvement in operations, continuous learning, and building value
+                        through disciplined execution over many years.
                     </p>
-                </div>
-                <div class="principle-item">
-                    <h3>Continuous Learning</h3>
                     <p>
-                        Every business is a learning opportunity. We document what works, refine processes, and improve
-                        over time.
+                        The model is simple: own businesses we understand, improve them with care and competence, and
+                        hold
+                        them indefinitely as part of a permanent group.
                     </p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Core Principles Section -->
+        <section class="content-section-alt">
+            <div class="container-xl">
+                <h2 class="section-title section-title-center section-title-white">Core Principles</h2>
+                <div class="principles-grid">
+                    <div class="principle-item">
+                        <h3>Operator-First</h3>
+                        <p>
+                            We lead from the inside. Our understanding comes from direct involvement in the work, not
+                            financial modeling alone.
+                        </p>
+                    </div>
+                    <div class="principle-item">
+                        <h3>Long-Term Ownership</h3>
+                        <p>
+                            Companies are held indefinitely. The goal is compounding value through patient execution,
+                            not
+                            quick exits.
+                        </p>
+                    </div>
+                    <div class="principle-item">
+                        <h3>Continuous Learning</h3>
+                        <p>
+                            Every business is a learning opportunity. We document what works, refine processes, and
+                            improve
+                            over time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
 </html>
