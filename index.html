@@ -40,12 +40,16 @@
         }
 
         /* Page Container System */
-        .page {
-            display: none;
-            height: 100%;
-            overflow-y: auto;
-            padding-top: 80px;
-        }
+      .page {
+    display: none;
+    height: 100%;
+    overflow-y: auto;
+}
+.page > .hero-section,
+.page > .hero-section-small {
+    padding-top: 80px;
+}
+
 
         .page.active {
             display: block;
