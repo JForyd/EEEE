@@ -1,1 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="What We're Learning - EEEE Group">
+    <title>EEEE Group - What We're Learning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <button class="logo-button" onclick="toggleDropdown()">EEEE</button>
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="learning.html">What We're Learning</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="vision.html">Vision</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- LEARNING PAGE CONTENT -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section-small">
+            <div class="hero-background">
+                <img src="https://images.unsplash.com/photo-1768734461938-6d6a0a67090e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaW5lJTIwZm9yZXN0JTIwb3ZlcmNhc3QlMjBjYWxtfGVufDF8fHx8MTc3MDAwMjQ1MXww&ixlib=rb-4.1.0&q=80&w=1080"
+                    alt="Pine forest landscape">
+            </div>
+            <div class="hero-overlay-alt"></div>
+
+            <div class="hero-content">
+                <h1>What We're Learning</h1>
+            </div>
+        </section>
+
+        <!-- Content Section -->
+        <section class="content-section-light">
+            <div class="container">
+                <div class="content-text">
+                    <p>
+                        Operating businesses is a continuous learning process. Every company presents different
+                        challenges,
+                        different opportunities, and different lessons about what works and what doesn't.
+                    </p>
+
+                    <p style="margin-bottom: 4rem;">
+                        This page is a working record of principles, observations, and questions we're exploring as we
+                        build
+                        EEEE Group and the companies within it.
+                    </p>
+
+                    <div class="border-left-section">
+                        <h2 class="section-subtitle-small">On Ownership Models</h2>
+                        <p class="content-text-small" style="opacity: 0.8;">
+                            Traditional private equity models optimize for a different outcome: raise capital, deploy it
+                            quickly, improve operations or valuation metrics, then exit within a fixed timeframe. This
+                            creates pressure to prioritize short-term gains and financial engineering over sustainable
+                            operational improvements. We're testing whether permanent ownership, with no pressure to
+                            exit,
+                            allows for better long-term decision-making and compounding value.
+                        </p>
+                    </div>
+
+                    <div class="border-left-section">
+                        <h2 class="section-subtitle-small">On Operator Involvement</h2>
+                        <p class="content-text-small" style="opacity: 0.8;">
+                            There is a meaningful difference between advising a business and running it. Ownership
+                            without
+                            operational involvement can lead to misaligned incentives and surface-level understanding.
+                            We
+                            believe that deep involvement in the actual work—understanding processes, customers, and
+                            constraints firsthand—produces better outcomes. The challenge is scaling this model while
+                            maintaining quality.
+                        </p>
+                    </div>
+
+                    <div class="border-left-section">
+                        <h2 class="section-subtitle-small">On Building Systems</h2>
+                        <p class="content-text-small" style="opacity: 0.8;">
+                            Heroic effort can save a struggling business in the short term, but it's not a sustainable
+                            strategy. Real improvement comes from building reliable systems: clear processes, documented
+                            standards, and feedback loops that identify problems early. The difficulty is balancing
+                            structure with flexibility—systems should support good decision-making, not replace it.
+                        </p>
+                    </div>
+
+                    <div class="border-left-section">
+                        <h2 class="section-subtitle-small">On Capital Allocation</h2>
+                        <p class="content-text-small" style="opacity: 0.8;">
+                            Without the discipline of external investors or debt covenants, it's easy to misallocate
+                            capital—either by being too conservative or too aggressive. We're learning to evaluate
+                            opportunities based on operational fit, not just financial returns, and to be patient when
+                            the
+                            right opportunities aren't immediately available.
+                        </p>
+                    </div>
+
+                    <div class="border-left-section">
+                        <h2 class="section-subtitle-small">On Mistakes and Iteration</h2>
+                        <p class="content-text-small" style="opacity: 0.8;">
+                            Mistakes are inevitable when building businesses. The important part is identifying them
+                            quickly, understanding what went wrong, and adjusting. A culture that penalizes mistakes
+                            discourages honest assessment. A culture that tolerates repeated mistakes without correction
+                            wastes resources. Finding the right balance is ongoing work.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <section class="footer-note">
+            <p>
+                This is not a complete list. It will continue to evolve as we learn more.
+            </p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
