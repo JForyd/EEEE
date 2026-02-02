@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <link rel="icon" type="image/png" href="./favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
@@ -27,9 +26,6 @@
 
         html {
             scroll-behavior: smooth;
-            scroll-snap-type: y mandatory;
-            overflow-y: scroll;
-            height: 100vh;
         }
 
         body {
@@ -39,23 +35,28 @@
             color: #000000;
             line-height: 1.6;
             padding-top: 80px;
-            height: 100vh;
-            overflow-y: auto;
+            overflow: hidden;
         }
 
-        /* Make each major section a full-screen page */
+        /* Single-section visibility - only show targeted section */
         section {
+            display: none;
             min-height: 100vh;
-            scroll-snap-align: start;
-            scroll-snap-stop: always;
-            position: relative;
         }
 
-        /* Sections that need internal scrolling */
-        .scrollable-section {
-            height: 100vh;
-            overflow-y: auto;
-            scroll-snap-align: start;
+        /* Show home by default when no hash */
+        section#home {
+            display: block;
+        }
+
+        /* Show only the targeted section */
+        section:target {
+            display: block;
+        }
+
+        /* Hide home when any other section is targeted */
+        section:target~section#home {
+            display: none;
         }
 
         /* Header and Navigation */
@@ -131,7 +132,6 @@
         .hero-section {
             position: relative;
             min-height: 100vh;
-            height: 100vh;
             display: flex;
             align-items: center;
             overflow: hidden;
@@ -139,8 +139,7 @@
 
         .hero-section-small {
             position: relative;
-            min-height: 100vh;
-            height: 100vh;
+            padding: 8rem 2rem;
             display: flex;
             align-items: center;
             overflow: hidden;
@@ -265,33 +264,19 @@
 
         /* Content Sections */
         .content-section {
-            min-height: 100vh;
-            height: 100vh;
             padding: 7rem 2rem;
             background-color: #ffffff;
-            overflow-y: auto;
-            display: flex;
-            align-items: center;
         }
 
         .content-section-alt {
-            min-height: 100vh;
-            height: 100vh;
             padding: 7rem 2rem;
             background-color: var(--color-primary);
             color: #ffffff;
-            overflow-y: auto;
-            display: flex;
-            align-items: center;
         }
 
         .content-section-light {
-            min-height: 100vh;
-            height: 100vh;
             padding: 5rem 1.5rem;
             background-color: #ffffff;
-            overflow-y: auto;
-            box-sizing: border-box;
         }
 
         .container {
@@ -440,14 +425,9 @@
 
         /* Footer Sections */
         .footer-note {
-            min-height: 100vh;
-            height: 100vh;
             padding: 4rem 1.5rem;
             background-color: rgba(15, 59, 46, 0.05);
             text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .footer-note p {
